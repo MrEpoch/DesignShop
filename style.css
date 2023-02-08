@@ -7,6 +7,7 @@
 :root {
   --main-color-dark-blue: #34495e;
   --side-color-light-blue: #3498db;
+  --side-color-light-blue-hover: #2a8cce;
   --nav-white-color: #ecf0f1;
 }
 
@@ -45,6 +46,10 @@ body {
   padding: 10px;
 }
 
+.shopLogo:hover {
+  cursor: pointer;
+}
+
 .search {
   display: block;
   grid-column: 3 / 5;
@@ -64,12 +69,19 @@ body {
 }
 
 .search-button {
+  transition: 0.3s;
   padding-top: 5px;
   padding-left: 30px;
   width: 50px;
 }
 
+.search-button:hover {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
 .magnify {
+  transition: 0.3s;
   width: 30px;
   height: 30px;
 }
@@ -78,6 +90,12 @@ body {
   transition: 0.3s;
   width: 40px;
   height: 40px;
+}
+
+.magnify:active {
+  transition: 0.3s;
+  width: 35px;
+  height: 35px;
 }
 
 .orderedItems {
@@ -89,16 +107,62 @@ body {
   width: 50px;
   height: 50px;
   border: 2px solid black;
+  transition: 0.3s;
+}
+
+.orderedItems:hover {
+  width: 60px;
+  height: 60px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .cart {
-  width: 40px;
-  height: 40px;
+  transition: 0.3s;
+  width: 80%;
+  height: 80%;
+}
+
+.cart:hover {
+  transition: 0.3s;
 }
 
 .otherPages {
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-around;
+  background-color: var(--side-color-light-blue);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
   box-shadow: 0 0px 4px 1px;
+}
+
+.otherPages > h4:hover {
+  cursor: pointer;
+  background-color: var(--side-color-light-blue-hover);
+}
+
+.otherPages > h4 {
+  padding-left: 10px;
+  padding-top: 7px;
+  border-left: 2px solid black;
+}
+
+.otherPages > h4:hover {
+  color: var(--nav-white-color);
+}
+
+/*  */
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 6fr 1.5fr;
+}
+
+.content {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-row: 3fr 6fr;
+}
+
+.slider {
+  grid-row: 1 / 2;
+  border: 2px solid black;
 }
