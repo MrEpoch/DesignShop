@@ -41,8 +41,8 @@ body {
 
 .shopLogo {
   grid-column: 2 / 3;
-  width: 50%;
-  height: 100%;
+  width: 100px;
+  height: 90px;
   padding: 10px;
 }
 
@@ -51,7 +51,6 @@ body {
 }
 
 .search {
-  display: block;
   grid-column: 3 / 5;
   display: flex;
   align-items: center;
@@ -140,8 +139,7 @@ body {
 }
 
 .otherPages > h4 {
-  padding-left: 10px;
-  padding-top: 7px;
+  text-align: center;
   border-left: 2px solid black;
 }
 
@@ -165,4 +163,23 @@ body {
 .slider {
   grid-row: 1 / 2;
   border: 2px solid black;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.visible {
+  width: 100%;
+  height: 100px;
+}
+
+.non-visible {
+  visibility: hidden;
+  display: none;
+  height: 0;
+  width: 0;
 }
