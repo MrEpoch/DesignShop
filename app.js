@@ -3,6 +3,7 @@ const pointContainer = document.querySelector(".point-container");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const Cards = document.querySelectorAll("#card");
+const curYear = document.querySelector("cur-year");
 let curAd = 0;
 
 function changeAd(direction) {
@@ -83,3 +84,8 @@ fetch(
       cur += 1;
     });
   });
+
+const changeYear = (spanEle) => {
+  const curYear = new Date().getFullYear();
+  spanEle.textContent = curYear;
+};
